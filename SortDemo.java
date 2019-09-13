@@ -6,7 +6,7 @@ public class SortDemo{
 	private static int count = 0;
 	public static void main(String args[]){
 		// 随机产生30个整数
-		int[] array = new int[2];
+		int[] array = new int[10];
 		Random random = new Random();
 		for(int i = 0 ; i < array.length ; i++){
 			array[i] = random.nextInt(100);
@@ -18,8 +18,9 @@ public class SortDemo{
 		//SelectSort.selectSort(array);
 		//ShellSort.shellSort(array);
 		print(array);
-		QuickSort.quickSort(array,0,array.length - 1);
-		print(array);
+		//QuickSort.quickSort(array,0,array.length - 1);
+		int[] newArr = MergeSort.mergeSort(array,0,array.length - 1);
+		print(newArr);
 		
 		long useTime = System.currentTimeMillis() - start;
 		System.out.println("用时：" + useTime + "ms");
