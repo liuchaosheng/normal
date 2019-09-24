@@ -7,7 +7,8 @@ package club.zylearn.demo;
 /**
  * 用于测试匿名内部类的使用，特殊的局部内部类
  * @author 朝阳
- *
+ * @since [2019-09-24]
+ * @version [1.0]
  */
 public class AnnoyOuter {
 	private String msg = "外部类的普通属性-message";
