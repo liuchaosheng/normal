@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>club.zylearn.maven.dom4jdemo</groupId>
+  <artifactId>demo1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  	<compile.version>3.1</compile.version>
+  	<jdk.version>1.8</jdk.version>
+  	<source.encoding>utf-8</source.encoding>
+  	<junit.version>4.11</junit.version>
+  	<log4j.version>1.6.1</log4j.version>
+  </properties>
+  
+  <dependencies>
+	<dependency>
+	    <groupId>dom4j</groupId>
+	    <artifactId>dom4j</artifactId>
+	    <version>${log4j.version}</version>
+	</dependency>
+  	
+  	
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>${junit.version}</version>
+  	</dependency>
+  </dependencies>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>${compile.version}</version>
+  			<configuration>
+  				<encoding>${source.encoding}</encoding>
+  				<source>${jdk.version}</source>
+  				<target>${jdk.version}</target>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  	<finalName>demo1</finalName>
+  </build>
+  
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<members>
+	<member id="1000">
+		<name>张三</name>
+		<age>30</age>
+		<sal>9000.0</sal>
+	</member>
+	<member id="1001">
+		<name>李四</name>
+		<age>31</age>
+		<sal>10000.0</sal>
+	</member>
+	<member id="1002">
+		<name>朝阳</name>
+		<age>35</age>
+		<sal>12000.0</sal>
+	</member>
+</members>
