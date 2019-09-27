@@ -1,0 +1,36 @@
+关于异常的总结：
+1、如果某个语句产生异常，其外部没有try，那么则该异常会叫给jvm进行默认处理。
+默认处理就是打印异常信息，然后程序退出。
+例如：
+public static void fun(){
+	int num = 10 / 0;
+}
+
+2、如果外部有try，则会匹配catch中的异常类型，如果匹配成功，则执行catch中的语句，
+然后执行finally语句。如果匹配失败，则执行finally语句后直接将异常交给外层的try
+或者交给jvm默认处理。
+
+3、如果catch语句中将异常抛出，则依然会先执行finally语句后再将异常交给外层try或者jvm
+进行默认处理。
+
+4、Throwable <== Error      指的是虚拟机错误，此时程序未执行，所以程序员无法处理。
+			 
+			 <== Exception  指的是程序中产生的异常，可以处理。
+			                <== RuntimeException  运行时异常(一般可以通过程序检查而避免，不强制try)
+												 <== NullPointerException,ArrayIndexOutOfBoundException,
+													 ClassCastException,ArithmeticException,NumberFormatExcetion
+													 
+							<== 其他Exception  受检查异常(一般都是可以恢复的，强制try)
+												 <== SQLException,IOException
+
+5、finally语句一般用于资源关闭，因为不敢是否产生异常资源都需要关闭。
+
+6、记住异常处理的代码模型：
+try{
+	...
+}catch(XXXException e){
+	...       // 此处进行自己的处理
+	throw e;  // 此处将异常抛给外部处理
+}finally{
+	close();
+}
