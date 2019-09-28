@@ -28,7 +28,8 @@ public class Outer{
 	}
 }
 
-IV、匿名内部类：定义在方法中，可以理解成局部内部类的特殊形式。
+IV、匿名内部类：匿名内部类用在接口或者抽象类的实例化的时候。
+这种方式定义的类没有名字，只会在代码执行的时候产生一个实例。（不一定是放在方法中）
 形如：
 public class Outer{
 	public void fun(){
@@ -62,7 +63,17 @@ public class Outer{
 （4）自身不能定义静态域。
 （5）匿名内部类在方法中没有类名，只能使用一次，而且无法定义构造方法。
 
-
+5、lamda表达式：解决匿名内部类语法结构复杂的问题，使用函数式编程的语法：
+(param1,param2,...) -> {多行语句}      例如：
+									() -> {
+										System.out.println("sss");
+										return "sss";
+									};
+(param1,param2,...) -> 单行语句；   例如：
+									() -> System.out.println("sss");
+									
+(param1,param2,...) -> 表达式；         例如：
+									(s1,s2) -> s1 + s2;  // 不用写return语句 
 
 
 
