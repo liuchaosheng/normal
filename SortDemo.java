@@ -13,14 +13,15 @@ public class SortDemo{
 		}
 		long start = System.currentTimeMillis();
 		
-		//InsertSort.insertSortNew(array,1,0);
-		//BubbleSort.bubbleSort(array);
-		//SelectSort.selectSort(array);
-		//ShellSort.shellSort(array);
 		print(array);
-		//QuickSort.quickSort(array,0,array.length - 1);
-		int[] newArr = MergeSort.mergeSort(array,0,array.length - 1);
-		print(newArr);
+		//InsertSort.insertSortNew(array,1,0); // 进行普通插入排序
+		//BubbleSort.bubbleSort(array); // 进行冒泡排序
+		SelectSort.selectSort(array); // 进行选择排序
+		//ShellSort.shellSort(array);  //进行希尔排序，借助于插入排序
+		//QuickSort.quickSort(array,0,array.length - 1); // 进行快速排序
+		//int[] newArr = MergeSort.mergeSort(array,0,array.length - 1); // 进行归并排序
+		//print(newArr);
+		print(array);
 		
 		long useTime = System.currentTimeMillis() - start;
 		System.out.println("用时：" + useTime + "ms");

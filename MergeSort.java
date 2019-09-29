@@ -11,9 +11,13 @@ public class MergeSort{
 		
 		// 对左序列进行归并排序
 		int[] leftArr = mergeSort(array,start,midIndex);
+		ConsoleLog.info("产生左边有序序列为：");
+		SortDemo.print(leftArr);
 		
 		// 对右序列进行归并排序
 		int[] rightArr = mergeSort(array,midIndex + 1,end);
+		ConsoleLog.info("产生右边边有序序列为：");
+		SortDemo.print(rightArr);
 		
 		// 申请能容纳左右序列的新数组
 		int[] newArr = new int[leftArr.length + rightArr.length];
@@ -34,6 +38,7 @@ public class MergeSort{
 		while(rightPos < rightArr.length){
 			newArr[newArrPos++] = rightArr[rightPos++];
 		}
+		SortDemo.print(newArr);
 		return newArr;
 	}
 }

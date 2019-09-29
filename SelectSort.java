@@ -13,6 +13,8 @@ public class SelectSort{
 					array[start] = temp;
 				}
 			}
+			ConsoleLog.info("第" + (start + 1) + "轮选择的结果");
+			SortDemo.print(array);
 			start++;
 		}
 	}

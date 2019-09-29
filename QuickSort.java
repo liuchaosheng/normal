@@ -37,6 +37,8 @@ public class QuickSort{
 		}
 		// 循环结束则low==high 找到了baseValue的索引位置
 		array[low] = baseValue;
+		ConsoleLog.info("low = " + low + "，high = " + high + "，start = " + start + "，end = " + end + " ");
+		SortDemo.print(array);
 		
 		//递归执行前后两组 哪怕low-1<0或者low+1大于0该方法也会直接返回
 		quickSort(array,start,low-1);
