@@ -4,6 +4,8 @@ copyright
 
 package club.zylearn.vo;
 
+// ç”¨æˆ·2å¢åŠ äº†Person.javaçš„æ³¨é‡Š
+
 public class Person{
 	private Integer pid;
 	private String name;
@@ -42,7 +44,7 @@ public class Person{
 	public void setSal(Double sal){
 		this.sal = sal;
 	}
-	// ¸²Ğ´equals·½·¨
+	// Â¸Â²ÃÂ´equalsÂ·Â½Â·Â¨
 	@Override
 	public boolean equals(Object obj){
 		if(obj == null){
@@ -63,6 +65,6 @@ public class Person{
 	}
 	@Override
 	public String toString(){
-		return "¡¾ÈËÔ±±àºÅ£º" + this.pid + "£¬ĞÕÃû£º" + this.name + "£¬ÄêÁä£º" + this.age + "£¬¹¤×Ê£º" + this.sal + "¡¿"; 
+		return "Â¡Â¾ÃˆÃ‹Ã”Â±Â±Ã ÂºÃ…Â£Âº" + this.pid + "Â£Â¬ÃÃ•ÃƒÃ»Â£Âº" + this.name + "Â£Â¬Ã„ÃªÃÃ¤Â£Âº" + this.age + "Â£Â¬Â¹Â¤Ã—ÃŠÂ£Âº" + this.sal + "Â¡Â¿"; 
 	}
 }
