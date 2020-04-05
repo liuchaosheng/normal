@@ -14,5 +14,8 @@ public class MainDemo{
 		// 我正在测试中....
 		Object obj = null;
 		System.out.println("hello World!!!!");
+
+		// 我是用户二我在这里添加了一行代码
+		String user = "user2";
 	}
 }
