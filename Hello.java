@@ -16,4 +16,7 @@ class Hello{
 		Hello hello = new Hello();
 		System.out.println(hello.getName());
 	}
+	public static void vvvFun(){
+		System.out.println("我是用户2提交的代码！");
+	}
 }
