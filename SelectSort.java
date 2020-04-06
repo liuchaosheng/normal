@@ -1,19 +1,19 @@
 public class SelectSort{
-	// ½øĞĞÑ¡ÔñÅÅĞò
+	// è¿›è¡Œé€‰æ‹©æ’åº
 	public static void selectSort(int[] array){
-		// ¶¨ÒåÃ¿´ÎÑ¡ÔñµÄË÷Òı
+		// å®šä¹‰æ¯æ¬¡é€‰æ‹©çš„ç´¢å¼•
 		int start = 0;
 		while(start < array.length - 1){
-			// ¸úµ±Ç°Ñ¡ÔñË÷ÒıºóÃæµÄËùÓĞ½øĞĞ±È½ÏÕÒµ½ºÏÊÊµÄÖµ
+			// è·Ÿå½“å‰é€‰æ‹©ç´¢å¼•åé¢çš„æ‰€æœ‰è¿›è¡Œæ¯”è¾ƒæ‰¾åˆ°åˆé€‚çš„å€¼
 			for(int i = start + 1 ; i < array.length ; i++){
-				// Èç¹ûºóÃæµÄÆäËûÖµĞ¡ÓÚµ±Ç°Ñ¡ÔñµÄÖµÔò½øĞĞ½»»»
+				// å¦‚æœåé¢çš„å…¶ä»–å€¼å°äºå½“å‰é€‰æ‹©çš„å€¼åˆ™è¿›è¡Œäº¤æ¢
 				if(array[i] < array[start]){
 					int temp = array[i];
 					array[i] = array[start];
 					array[start] = temp;
 				}
 			}
-			ConsoleLog.info("µÚ" + (start + 1) + "ÂÖÑ¡ÔñµÄ½á¹û");
+			ConsoleLog.info("ç¬¬" + (start + 1) + "è½®é€‰æ‹©çš„ç»“æœ");
 			SortDemo.print(array);
 			start++;
 		}

@@ -1,6 +1,6 @@
 public class MainDemo{
 	public static void main(String args[]){
-		Book book = new Book("Ã«Ôó¶«×Ô´«",99.8);
+		Book book = new Book("æ¯›æ³½ä¸œè‡ªä¼ ",99.8);
 		System.out.println(book);
 	}
 }

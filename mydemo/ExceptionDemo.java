@@ -9,21 +9,21 @@ import java.sql.SQLException;
 
 public class ExceptionDemo{
 	public static void main(String args[]){
-		/*ConsoleLog.info("1¡¢¼ÆËã¿ªÊ¼");
+		/*ConsoleLog.info("1ã€è®¡ç®—å¼€å§‹");
 		try{
-			ConsoleLog.info("2¡¢¼ÆËã 10 / 0 = " + ( 10 / 0 ));
+			ConsoleLog.info("2ã€è®¡ç®— 10 / 0 = " + ( 10 / 0 ));
 		}catch(Exception e){
-			ConsoleLog.info("²úÉúÒì³£ÁË£¡");
+			ConsoleLog.info("äº§ç”Ÿå¼‚å¸¸äº†ï¼");
 		}finally{
-			ConsoleLog.info("²»¹ÜÕ¦ÑùÎÒ¶¼»áÖ´ĞĞ£¡");
+			ConsoleLog.info("ä¸ç®¡å’‹æ ·æˆ‘éƒ½ä¼šæ‰§è¡Œï¼");
 		}
-		ConsoleLog.info("3¡¢¼ÆËã½áÊø");*/
+		ConsoleLog.info("3ã€è®¡ç®—ç»“æŸ");*/
 		try{
 			doFun();
 		}catch(Exception e){
-			ConsoleLog.info("ÆäËûÒì³£²úÉúÁË....");
+			ConsoleLog.info("å…¶ä»–å¼‚å¸¸äº§ç”Ÿäº†....");
 		}finally{
-			ConsoleLog.info("ÎÒÊÇµÚ¶ş²ãfinally´úÂë");
+			ConsoleLog.info("æˆ‘æ˜¯ç¬¬äºŒå±‚finallyä»£ç ");
 		}
 		
 	}
@@ -36,11 +36,11 @@ public class ExceptionDemo{
 		int ret = 0;
 		try{
 			ret = fun("100","0");
-			ConsoleLog.info("ÎÒÊÇtry¿éÖĞÒì³£ºóÃæµÄ´úÂë£¡");
+			ConsoleLog.info("æˆ‘æ˜¯tryå—ä¸­å¼‚å¸¸åé¢çš„ä»£ç ï¼");
 		}catch(Exception e){
 			throw e;
 		}finally{
-			ConsoleLog.info("ÎÒÊÇµÚÒ»²ãfinally´úÂë");
+			ConsoleLog.info("æˆ‘æ˜¯ç¬¬ä¸€å±‚finallyä»£ç ");
 		}
 		ConsoleLog.info(String.valueOf(ret));
 	}

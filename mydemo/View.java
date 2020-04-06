@@ -6,9 +6,9 @@ package club.zylearn.view;
 
 import java.util.Map;
 
-// ¹ØÓÚÊÓÍ¼µÄ½Ó¿Ú
+// å…³äºè§†å›¾çš„æ¥å£
 public interface View{
 	public static final String DET = "**********************";
-	// Ê¹ÓÃ´«ÈëµÄÊı¾İÄ£ĞÍ½øĞĞäÖÈ¾
+	// ä½¿ç”¨ä¼ å…¥çš„æ•°æ®æ¨¡å‹è¿›è¡Œæ¸²æŸ“
 	public void render(Map<String,Object> model);
 }

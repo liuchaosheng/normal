@@ -1,5 +1,5 @@
 class Book{
-	public static String pub = "ÖĞ¹úÈËÃñ³ö°æÉç";
+	public static String pub = "ä¸­å›½äººæ°‘å‡ºç‰ˆç¤¾";
 	private String bookName;
 	private Double price;
 	public Book(){
@@ -22,12 +22,12 @@ class Book{
 	}
 	@Override
 	public String toString(){
-		return "ÊéÃû£º" + this.bookName + "£¬¼Û¸ñ£º" + this.price + "£¬³ö°æÉç£º" + Book.pub;
+		return "ä¹¦åï¼š" + this.bookName + "ï¼Œä»·æ ¼ï¼š" + this.price + "ï¼Œå‡ºç‰ˆç¤¾ï¼š" + Book.pub;
 	}
 }
 public class TestDemo{
 	public static void main(String args[]){
-		Book book = new Book("Ã«Ôó¶«×Ô´«",99.8);
+		Book book = new Book("æ¯›æ³½ä¸œè‡ªä¼ ",99.8);
 		System.out.println(book);
 	}
 }

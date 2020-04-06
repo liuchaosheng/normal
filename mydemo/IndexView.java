@@ -11,7 +11,7 @@ import club.zylearn.view.View;
 import club.zylearn.vo.Person;
 import club.zylearn.controller.Controller;
 
-// ¹ØÓÚÊÓÍ¼µÄ½Ó¿Ú
+// å…³äºè§†å›¾çš„æ¥å£
 public class IndexView implements View{
 	private Controller controller;
 	public void setController(Controller controller){
@@ -20,19 +20,19 @@ public class IndexView implements View{
 	public IndexView(Controller controller){
 		this.controller = controller;
 	}
-	// Ê¹ÓÃ´«ÈëµÄÊı¾İÄ£ĞÍ½øĞĞäÖÈ¾
+	// ä½¿ç”¨ä¼ å…¥çš„æ•°æ®æ¨¡å‹è¿›è¡Œæ¸²æŸ“
 	@Override
 	public void render(Map<String,Object> model){
 		List<Person> persons = (List<Person>)model.get("persons");
-		System.out.println(View.DET + "Ö÷Ò³" + View.DET);
+		System.out.println(View.DET + "ä¸»é¡µ" + View.DET);
 		for(Person person : persons){
 			System.out.println(person);
 		}
-		System.out.println("1¡¢Ôö¼ÓÈËÔ±ĞÅÏ¢");
-		System.out.println("2¡¢ĞŞ¸ÄÈËÔ±ĞÅÏ¢");
-		System.out.println("3¡¢É¾³ıÈËÔ±ĞÅÏ¢");
-		System.out.println("4¡¢ÍË³öÏµÍ³");
-		String ret = ConsoleStream.getInputString("ÊäÈëÑ¡Ïî£º");
+		System.out.println("1ã€å¢åŠ äººå‘˜ä¿¡æ¯");
+		System.out.println("2ã€ä¿®æ”¹äººå‘˜ä¿¡æ¯");
+		System.out.println("3ã€åˆ é™¤äººå‘˜ä¿¡æ¯");
+		System.out.println("4ã€é€€å‡ºç³»ç»Ÿ");
+		String ret = ConsoleStream.getInputString("è¾“å…¥é€‰é¡¹ï¼š");
 		int status = Integer.parseInt(ret);
 		switch(status){
 			case 1:

@@ -5,11 +5,11 @@ copyright
 import java.util.Date;
 import java.text.SimpleDateFormat;
 /**
-ÓÃÓÚ×ö¿ØÖÆÌ¨Êä³öĞÅÏ¢µÄÀà
+ç”¨äºåšæ§åˆ¶å°è¾“å‡ºä¿¡æ¯çš„ç±»
 */
 public class ConsoleLog{
-	private static final String LOG_START = "¡¾";
-	private static final String LOG_END = "¡¿";
+	private static final String LOG_START = "ã€";
+	private static final String LOG_END = "ã€‘";
 	private static final String XING = "****************";
 	private static final String TIME_FORMAT_NORMAL = "yyyy-MM-dd HH:mm:ss";
 	private static final String SPACE = " ";

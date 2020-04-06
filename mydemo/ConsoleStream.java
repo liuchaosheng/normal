@@ -7,20 +7,20 @@ package club.zylearn.util;
 import java.util.Scanner;
 
 /**
-ÓÃÓÚÏò¿ØÖÆÌ¨»ñÈ¡Ò»ĞĞÊäÈë
+ç”¨äºå‘æ§åˆ¶å°è·å–ä¸€è¡Œè¾“å…¥
 */
 public class ConsoleStream{
-	private static final String PAT = "£º";
+	private static final String PAT = "ï¼š";
 	private static final String ENTER = "\r\n";
 	private static final String ENPTY = "";
 	public static String getInputString(String comment){
-		// ´òÓ¡ÌáÊ¾ĞÅÏ¢
+		// æ‰“å°æç¤ºä¿¡æ¯
 		System.out.print(comment);
-		// ÊµÀı»¯É¨ÃèÁ÷
+		// å®ä¾‹åŒ–æ‰«ææµ
 		Scanner scan = new Scanner(System.in);
-		// ÉèÖÃ·Ö¸ô·û
+		// è®¾ç½®åˆ†éš”ç¬¦
 		scan.useDelimiter(ENTER);
-		// ¶ÁÈ¡Ò»ĞĞ
+		// è¯»å–ä¸€è¡Œ
 		String newLine = null;
 		while(scan.hasNext()){
 			newLine = scan.next();

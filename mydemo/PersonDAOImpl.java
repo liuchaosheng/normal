@@ -14,41 +14,41 @@ public class PersonDAOImpl implements IPersonDAO{
 	private List<Person> persons = new ArrayList<Person>();
 	@Override
 	public boolean doCreate(Person vo){
-		ConsoleLog.info("ÕıÔÚÌí¼ÓÈËÔ±ĞÅÏ¢...");
+		ConsoleLog.info("æ­£åœ¨æ·»åŠ äººå‘˜ä¿¡æ¯...");
 		if(vo == null){
-			ConsoleLog.info("Ìí¼ÓÈËÔ±ĞÅÏ¢Ê§°Ü£¡");
+			ConsoleLog.info("æ·»åŠ äººå‘˜ä¿¡æ¯å¤±è´¥ï¼");
 			return false;
 		}
 		persons.add(vo);
-		ConsoleLog.info("Ìí¼ÓÈËÔ±ĞÅÏ¢³É¹¦£¡");
+		ConsoleLog.info("æ·»åŠ äººå‘˜ä¿¡æ¯æˆåŠŸï¼");
 		return true;
 	}
 	@Override
 	public boolean doUpdate(Person vo){
-		ConsoleLog.info("ÕıÔÚĞŞ¸ÄÈËÔ±ĞÅÏ¢...");
+		ConsoleLog.info("æ­£åœ¨ä¿®æ”¹äººå‘˜ä¿¡æ¯...");
 		if(vo == null){
-			ConsoleLog.info("ĞŞ¸ÄÈËÔ±ĞÅÏ¢Ê§°Ü£¡");
+			ConsoleLog.info("ä¿®æ”¹äººå‘˜ä¿¡æ¯å¤±è´¥ï¼");
 			return false;
 		}
-		// ±éÀú¼¯ºÏ
+		// éå†é›†åˆ
 		for(Person person : persons){
 			if(vo.getPid().equals(person.getPid())){
-				// Èç¹ûÕÒµ½¶ÔÓ¦µÄpidÔò½øĞĞĞŞ¸Ä
+				// å¦‚æœæ‰¾åˆ°å¯¹åº”çš„pidåˆ™è¿›è¡Œä¿®æ”¹
 				person.setName(vo.getName());
 				person.setAge(vo.getAge());
 				person.setSal(vo.getSal());
-				ConsoleLog.info("ĞŞ¸ÄÈËÔ±ĞÅÏ¢³É¹¦£¡");
+				ConsoleLog.info("ä¿®æ”¹äººå‘˜ä¿¡æ¯æˆåŠŸï¼");
 				return true;
 			}
 		}
-		ConsoleLog.info("ĞŞ¸ÄÈËÔ±ĞÅÏ¢Ê§°Ü£¡");
+		ConsoleLog.info("ä¿®æ”¹äººå‘˜ä¿¡æ¯å¤±è´¥ï¼");
 		return false;
 	}
 	@Override
 	public boolean doRemove(Integer pid){
-		ConsoleLog.info("ÕıÔÚÉ¾³ıÈËÔ±ĞÅÏ¢...");
+		ConsoleLog.info("æ­£åœ¨åˆ é™¤äººå‘˜ä¿¡æ¯...");
 		if(pid == null){
-			ConsoleLog.info("É¾³ıÈËÔ±ĞÅÏ¢Ê§°Ü£¡");
+			ConsoleLog.info("åˆ é™¤äººå‘˜ä¿¡æ¯å¤±è´¥ï¼");
 			return false;
 		}
 		Person temp = null;
@@ -60,22 +60,22 @@ public class PersonDAOImpl implements IPersonDAO{
 		}
 		if(temp != null){
 			persons.remove(temp);
-			ConsoleLog.info("É¾³ıÈËÔ±ĞÅÏ¢³É¹¦£¡");
+			ConsoleLog.info("åˆ é™¤äººå‘˜ä¿¡æ¯æˆåŠŸï¼");
 			return true;
 		}
-		ConsoleLog.info("É¾³ıÈËÔ±ĞÅÏ¢Ê§°Ü£¡");
+		ConsoleLog.info("åˆ é™¤äººå‘˜ä¿¡æ¯å¤±è´¥ï¼");
 		return false;
 	}
 	@Override
 	public Person findById(Integer pid){
-		ConsoleLog.info("ÕıÔÚ²éÕÒÈËÔ±ĞÅÏ¢...");
+		ConsoleLog.info("æ­£åœ¨æŸ¥æ‰¾äººå‘˜ä¿¡æ¯...");
 		for(Person person : persons){
 			if(pid.equals(person.getPid())){
-				ConsoleLog.info("ÕÒµ½==>" + person.toString());
+				ConsoleLog.info("æ‰¾åˆ°==>" + person.toString());
 				return person;
 			}
 		}
-		ConsoleLog.info("²éÕÒÈËÔ±ĞÅÏ¢Ê§°Ü£¡");
+		ConsoleLog.info("æŸ¥æ‰¾äººå‘˜ä¿¡æ¯å¤±è´¥ï¼");
 		return null;
 	}
 	@Override

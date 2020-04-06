@@ -15,54 +15,54 @@ import club.zylearn.vo.Person;
 import club.zylearn.util.ConsoleLog;
 import club.zylearn.view.impl.*;
 
-// ¹ØÓÚÊÓÍ¼µÄ½Ó¿Ú
+// å…³äºè§†å›¾çš„æ¥å£
 public class Controller{
 	private Map<String,View> viewsMap = new HashMap<String,View>();
 	private IPersonDAO dao = new PersonDAOImpl();
-	// Ä¬ÈÏ¹¹Ôìº¯Êı
+	// é»˜è®¤æ„é€ å‡½æ•°
 	public Controller(){
-		// ³õÊ¼»¯ËùÓĞÊı¾İ
-		dao.doCreate(new Person(1111,"ÕÅÈı",19,4000.0));
-		dao.doCreate(new Person(1112,"³¯Ñô",39,4000.0));
-		dao.doCreate(new Person(1113,"ÀîËÄ",22,3800.0));
+		// åˆå§‹åŒ–æ‰€æœ‰æ•°æ®
+		dao.doCreate(new Person(1111,"å¼ ä¸‰",19,4000.0));
+		dao.doCreate(new Person(1112,"æœé˜³",39,4000.0));
+		dao.doCreate(new Person(1113,"æå››",22,3800.0));
 		dao.doCreate(new Person(1114,"john",31,6000.0));
-		dao.doCreate(new Person(1115,"ÀîĞË»ª",23,9000.0));
+		dao.doCreate(new Person(1115,"æå…´å",23,9000.0));
 		
-		// ¸Ã¹¹Ôì·½·¨ÖĞÒª¸ºÔğÊµÀı»¯ËùÓĞµÄÊÓÍ¼ĞÅÏ¢
+		// è¯¥æ„é€ æ–¹æ³•ä¸­è¦è´Ÿè´£å®ä¾‹åŒ–æ‰€æœ‰çš„è§†å›¾ä¿¡æ¯
 		viewsMap.put("preAdd",new PreAddPersonView(this));
 		viewsMap.put("preEdit",new PreEditPersonView(this));
 		viewsMap.put("preDelete",new PreDeletePersonView(this));
 		viewsMap.put("index",new IndexView(this));
 	}
-	// Ôö¼Ó
+	// å¢åŠ 
 	public void add(Person vo){
 		dao.doCreate(vo);
-		// ·şÎñÆ÷Ìø×ª
+		// æœåŠ¡å™¨è·³è½¬
 		index();
 	}
-	// ĞŞ¸Ä
+	// ä¿®æ”¹
 	public void edit(Person vo){
 		dao.doUpdate(vo);
 		index();
 	}
-	// É¾³ı
+	// åˆ é™¤
 	public void delete(Integer pid){
 		dao.doRemove(pid);
 		index();
 	}
-	// ÁĞ±í
+	// åˆ—è¡¨
 	public void index(){
 		Map<String,Object> model = new HashMap<String,Object>();
 		List<Person> persons = dao.findAll();
 		model.put("persons",persons);
-		// Ìø×ªµ½Ö÷Ò³
+		// è·³è½¬åˆ°ä¸»é¡µ
 		dispatcher("index",model);
 	}
-	// ÊÓÍ¼Ìø×ª
+	// è§†å›¾è·³è½¬
 	public void dispatcher(String viewName,Map<String,Object> model){
 		View view = (View)this.viewsMap.get(viewName);
 		if(view != null){
-			// äÖÈ¾ÊÓÍ¼
+			// æ¸²æŸ“è§†å›¾
 			view.render(model);
 		}
 	}

@@ -44,7 +44,7 @@ public class Person{
 	public void setSal(Double sal){
 		this.sal = sal;
 	}
-	// ¸²Ð´equals·½·¨
+	// 覆写equals方法
 	@Override
 	public boolean equals(Object obj){
 		if(obj == null){
@@ -65,6 +65,10 @@ public class Person{
 	}
 	@Override
 	public String toString(){
+<<<<<<< Updated upstream
 		return "¡¾ÈËÔ±±àºÅ£º" + this.pid + "£¬ÐÕÃû£º" + this.name + "£¬ÄêÁä£º" + this.age + "£¬¹¤×Ê£º" + this.sal + "¡¿"; 
+=======
+		return "【人员编号：" + this.pid + "，姓名：" + this.name + "，年龄：" + this.age + "，工资：" + this.sal + "】"; 
+>>>>>>> Stashed changes
 	}
 }

@@ -1,37 +1,37 @@
-// ¹é²¢ÅÅĞò
+// å½’å¹¶æ’åº
 public class MergeSort{
-	// ¾ßÌå·½·¨  ¶Ôstart-endË÷Òı´¦Êı¾İ½øĞĞ¹é²¢ ÅÅĞò
+	// å…·ä½“æ–¹æ³•  å¯¹start-endç´¢å¼•å¤„æ•°æ®è¿›è¡Œå½’å¹¶ æ’åº
 	public static int[] mergeSort(int[] array,int start,int end){
-		// Èç¹û¸Ã×éÖ»ÓĞÒ»¸öÊı¾İÔò·µ»Ø£¬ÕâÒ²ÊÇµİ¹éµÄ³ö¿Ú
+		// å¦‚æœè¯¥ç»„åªæœ‰ä¸€ä¸ªæ•°æ®åˆ™è¿”å›ï¼Œè¿™ä¹Ÿæ˜¯é€’å½’çš„å‡ºå£
 		if(start == end){
-			return new int[]{array[start]}; // Éú³ÉĞÂÊı×é·µ»Ø
+			return new int[]{array[start]}; // ç”Ÿæˆæ–°æ•°ç»„è¿”å›
 		}
-		// ¼ÆËã·Ö½çµãË÷Òı£¬È»ºóµİ¹é
+		// è®¡ç®—åˆ†ç•Œç‚¹ç´¢å¼•ï¼Œç„¶åé€’å½’
 		int midIndex = start + (end - start) / 2;
 		
-		// ¶Ô×óĞòÁĞ½øĞĞ¹é²¢ÅÅĞò
+		// å¯¹å·¦åºåˆ—è¿›è¡Œå½’å¹¶æ’åº
 		int[] leftArr = mergeSort(array,start,midIndex);
-		ConsoleLog.info("²úÉú×ó±ßÓĞĞòĞòÁĞÎª£º");
+		ConsoleLog.info("äº§ç”Ÿå·¦è¾¹æœ‰åºåºåˆ—ä¸ºï¼š");
 		SortDemo.print(leftArr);
 		
-		// ¶ÔÓÒĞòÁĞ½øĞĞ¹é²¢ÅÅĞò
+		// å¯¹å³åºåˆ—è¿›è¡Œå½’å¹¶æ’åº
 		int[] rightArr = mergeSort(array,midIndex + 1,end);
-		ConsoleLog.info("²úÉúÓÒ±ß±ßÓĞĞòĞòÁĞÎª£º");
+		ConsoleLog.info("äº§ç”Ÿå³è¾¹è¾¹æœ‰åºåºåˆ—ä¸ºï¼š");
 		SortDemo.print(rightArr);
 		
-		// ÉêÇëÄÜÈİÄÉ×óÓÒĞòÁĞµÄĞÂÊı×é
+		// ç”³è¯·èƒ½å®¹çº³å·¦å³åºåˆ—çš„æ–°æ•°ç»„
 		int[] newArr = new int[leftArr.length + rightArr.length];
 		
-		// ¶¨ÒåË÷Òı·Ö±ğ±íÊ¾×óÓÒĞòÁĞµÄµ±Ç°Ë÷ÒıºÍĞÂĞòÁĞµÄµ±Ç°Ë÷Òı
+		// å®šä¹‰ç´¢å¼•åˆ†åˆ«è¡¨ç¤ºå·¦å³åºåˆ—çš„å½“å‰ç´¢å¼•å’Œæ–°åºåˆ—çš„å½“å‰ç´¢å¼•
 		int leftPos = 0;
 		int rightPos = 0;
 		int newArrPos = 0;
-		// ½«×óÓÒÓĞĞòĞòÁĞµÄÖµÑ­Ğò°´Ë³Ğò·ÅÈëĞÂÊı×éÖĞ
+		// å°†å·¦å³æœ‰åºåºåˆ—çš„å€¼å¾ªåºæŒ‰é¡ºåºæ”¾å…¥æ–°æ•°ç»„ä¸­
 		while(leftPos < leftArr.length && rightPos < rightArr.length){
 			newArr[newArrPos++] = leftArr[leftPos] < rightArr[rightPos] ? leftArr[leftPos++]
 				: rightArr[rightPos++];
 		}
-		// Ê£ÏÂ·Ç¿ÕĞòÁĞÔòÖ±½Ó¿½±´µ½ĞÂÊı×éÖĞ
+		// å‰©ä¸‹éç©ºåºåˆ—åˆ™ç›´æ¥æ‹·è´åˆ°æ–°æ•°ç»„ä¸­
 		while(leftPos < leftArr.length){
 			newArr[newArrPos++] = leftArr[leftPos++];
 		}

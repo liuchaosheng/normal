@@ -3,10 +3,10 @@ interface IMessage {
 }
 public class AnnoyDemo{
 	public static void main(String args[]){
-		// ÄäÃûÄÚ²¿Àà£¬Ö»ÊÇÔÚ·½·¨ÖĞÓĞĞ§£¬ÇÒÃ¿´Î·½·¨Ö´ĞĞÖ»ÄÜÊ¹ÓÃÒ»´Î
+		// åŒ¿åå†…éƒ¨ç±»ï¼Œåªæ˜¯åœ¨æ–¹æ³•ä¸­æœ‰æ•ˆï¼Œä¸”æ¯æ¬¡æ–¹æ³•æ‰§è¡Œåªèƒ½ä½¿ç”¨ä¸€æ¬¡
 		fun(new IMessage(){
 			public void print(){
-				System.out.println("ÎÒÊÇÄäÃûÄÚ²¿Àà£¬ÎÒÊÇ¾Ö²¿ÄÚ²¿ÀàµÄÌØÊâĞÎÊ½£¡");
+				System.out.println("æˆ‘æ˜¯åŒ¿åå†…éƒ¨ç±»ï¼Œæˆ‘æ˜¯å±€éƒ¨å†…éƒ¨ç±»çš„ç‰¹æ®Šå½¢å¼ï¼");
 			}
 		});
 	}

@@ -1,32 +1,32 @@
-// ¿ìËÙÅÅĞòµÄÊµÏÖ
+// å¿«é€Ÿæ’åºçš„å®ç°
 public class QuickSort{
-	// ¶ÔÊı×éarrayµÄstartµ½endË÷ÒıµÄÊı¾İ½øĞĞÅÅĞò
+	// å¯¹æ•°ç»„arrayçš„startåˆ°endç´¢å¼•çš„æ•°æ®è¿›è¡Œæ’åº
 	public static void quickSort(int[] array,int start,int end){
 		if(start >= end){
-			return ;  // Èç¹ûstart==end±íÃ÷µ±Ç°×éÒÑ¾­ÅÅĞò½áÊø£¬µİ¹éÒ²½áÊøÁË
+			return ;  // å¦‚æœstart==endè¡¨æ˜å½“å‰ç»„å·²ç»æ’åºç»“æŸï¼Œé€’å½’ä¹Ÿç»“æŸäº†
 		}
-		// È¡³öarray[start]×÷Îª»ù´¡Öµ
+		// å–å‡ºarray[start]ä½œä¸ºåŸºç¡€å€¼
 		int baseValue = array[start];
-		// ¶¨ÒåÁ½¸ö±äÁ¿À´·Ö±ğ´æ´¢Ç°ºóÉ¨ÃèµÄË÷Òı
+		// å®šä¹‰ä¸¤ä¸ªå˜é‡æ¥åˆ†åˆ«å­˜å‚¨å‰åæ‰«æçš„ç´¢å¼•
 		int low = start;
 		int high = end;
-		// ½øĞĞÑ­»·ÕÒµ½baseValueµÄË÷Òı
+		// è¿›è¡Œå¾ªç¯æ‰¾åˆ°baseValueçš„ç´¢å¼•
 		while(low < high){
-			// ´ÓºóÏòÇ°É¨Ãè
+			// ä»åå‘å‰æ‰«æ
 			while(low < high){
-				// ÕÒµÚÒ»¸ö±ÈbaseValueĞ¡µÄÊıÌæ»»lowËùÔÚÎ»ÖÃ
+				// æ‰¾ç¬¬ä¸€ä¸ªæ¯”baseValueå°çš„æ•°æ›¿æ¢lowæ‰€åœ¨ä½ç½®
 				if(array[high] < baseValue){
-					array[low] = array[high]; // ½«high--ÊÇÎªÁËÏÂÒ»´ÎÑ­»·
+					array[low] = array[high]; // å°†high--æ˜¯ä¸ºäº†ä¸‹ä¸€æ¬¡å¾ªç¯
 					break;
 				}
 				high--;
 			}
-			//ÅĞ¶ÏhighÊÇ·ñÖ¸ÏòÁËlow
-			if(high == low){ // ËµÃ÷ÒÑ¾­ÕÒµ½ÁËbaseValueÓ¦¸Ã·ÅÖÃµÄË÷Òı
+			//åˆ¤æ–­highæ˜¯å¦æŒ‡å‘äº†low
+			if(high == low){ // è¯´æ˜å·²ç»æ‰¾åˆ°äº†baseValueåº”è¯¥æ”¾ç½®çš„ç´¢å¼•
 				break;
 			}
-			low++; // lowËùÔÚÎ»ÖÃÒÑ¾­±»Ìæ»»ËùÒÔĞèÒª´ÓÏÂÒ»¸öË÷Òı¿ªÊ¼É¨Ãè
-			// ÅĞ¶ÏÆäÊµÉ¨ÃèÎ»ÖÃÊÇ·ñ¾ÍÊÇhighËùÔÚÎ»ÖÃ
+			low++; // lowæ‰€åœ¨ä½ç½®å·²ç»è¢«æ›¿æ¢æ‰€ä»¥éœ€è¦ä»ä¸‹ä¸€ä¸ªç´¢å¼•å¼€å§‹æ‰«æ
+			// åˆ¤æ–­å…¶å®æ‰«æä½ç½®æ˜¯å¦å°±æ˜¯highæ‰€åœ¨ä½ç½®
 			while(low < high){
 				if(array[low] > baseValue){
 					array[high--]=array[low];
@@ -35,12 +35,12 @@ public class QuickSort{
 				low++;
 			}
 		}
-		// Ñ­»·½áÊøÔòlow==high ÕÒµ½ÁËbaseValueµÄË÷ÒıÎ»ÖÃ
+		// å¾ªç¯ç»“æŸåˆ™low==high æ‰¾åˆ°äº†baseValueçš„ç´¢å¼•ä½ç½®
 		array[low] = baseValue;
-		ConsoleLog.info("low = " + low + "£¬high = " + high + "£¬start = " + start + "£¬end = " + end + " ");
+		ConsoleLog.info("low = " + low + "ï¼Œhigh = " + high + "ï¼Œstart = " + start + "ï¼Œend = " + end + " ");
 		SortDemo.print(array);
 		
-		//µİ¹éÖ´ĞĞÇ°ºóÁ½×é ÄÄÅÂlow-1<0»òÕßlow+1´óÓÚ0¸Ã·½·¨Ò²»áÖ±½Ó·µ»Ø
+		//é€’å½’æ‰§è¡Œå‰åä¸¤ç»„ å“ªæ€•low-1<0æˆ–è€…low+1å¤§äº0è¯¥æ–¹æ³•ä¹Ÿä¼šç›´æ¥è¿”å›
 		quickSort(array,start,low-1);
 		quickSort(array,low+1,end);
 	}

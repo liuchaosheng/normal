@@ -1,16 +1,16 @@
 public class BubbleSort{
-	// ½øĞĞÃ°ÅİÅÅĞòµÄ·½·¨
+	// è¿›è¡Œå†’æ³¡æ’åºçš„æ–¹æ³•
 	public static void bubbleSort(int[] array){
-		ConsoleLog.info("¿ªÊ¼Ã°ÅİÅÅĞò");
-		// ¼ÆËãÃ°ÅİµÄµÄÂÖÊı
+		ConsoleLog.info("å¼€å§‹å†’æ³¡æ’åº");
+		// è®¡ç®—å†’æ³¡çš„çš„è½®æ•°
 		int bubbleCount = array.length - 1;
-		// Ñ­»·Ö´ĞĞbubbleCountÂÖÃ°Åİ
+		// å¾ªç¯æ‰§è¡ŒbubbleCountè½®å†’æ³¡
 		for(int i = 0 ; i < bubbleCount ; i++){
-			ConsoleLog.info("½øĞĞµÚ" + (i + 1) + "ÂÖÃ°Åİ£º");
-			// Ã¿Ò»ÂÖÃ°Åİ¹ı³Ì×îºóÒ»´Î¶Ô±ÈµÄÆğÊ¼Ë÷Òı¶¼²»Ò»Ñù£¬ÏÈ¼ÆËã¸ÃÆğÊ¼Ë÷Òı
+			ConsoleLog.info("è¿›è¡Œç¬¬" + (i + 1) + "è½®å†’æ³¡ï¼š");
+			// æ¯ä¸€è½®å†’æ³¡è¿‡ç¨‹æœ€åä¸€æ¬¡å¯¹æ¯”çš„èµ·å§‹ç´¢å¼•éƒ½ä¸ä¸€æ ·ï¼Œå…ˆè®¡ç®—è¯¥èµ·å§‹ç´¢å¼•
 			int lastStartIndex = array.length - i - 1;
 			for(int j = 0 ; j < lastStartIndex ; j++){
-				// ±È½Ïµ±Ç°Ë÷Òı¶ÔÓ¦µÄÖµ¸úÏÂÒ»Ë÷Òı¶ÔÓ¦µÄÖµÅĞ¶ÏÊÇ·ñĞèÒªÃ°Åİ
+				// æ¯”è¾ƒå½“å‰ç´¢å¼•å¯¹åº”çš„å€¼è·Ÿä¸‹ä¸€ç´¢å¼•å¯¹åº”çš„å€¼åˆ¤æ–­æ˜¯å¦éœ€è¦å†’æ³¡
 				if(array[j] > array[j+1]){
 					int temp = array[j];
 					array[j] = array[j+1];
@@ -19,6 +19,6 @@ public class BubbleSort{
 			}
 			SortDemo.print(array);
 		}
-		ConsoleLog.info("½áÊøÃ°ÅİÅÅĞò");
+		ConsoleLog.info("ç»“æŸå†’æ³¡æ’åº");
 	}
 }

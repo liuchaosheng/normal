@@ -11,7 +11,7 @@ import club.zylearn.view.View;
 import club.zylearn.vo.Person;
 import club.zylearn.controller.Controller;
 
-// ¹ØÓÚÊÓÍ¼µÄ½Ó¿Ú
+// å…³äºè§†å›¾çš„æ¥å£
 public class PreEditPersonView implements View{
 	private Controller controller;
 	public void setController(Controller controller){
@@ -20,19 +20,19 @@ public class PreEditPersonView implements View{
 	public PreEditPersonView(Controller controller){
 		this.controller = controller;
 	}
-	// Ê¹ÓÃ´«ÈëµÄÊı¾İÄ£ĞÍ½øĞĞäÖÈ¾
+	// ä½¿ç”¨ä¼ å…¥çš„æ•°æ®æ¨¡å‹è¿›è¡Œæ¸²æŸ“
 	@Override
 	public void render(Map<String,Object> model){
-		System.out.println(View.DET + "ĞŞ¸ÄÈËÔ±" + View.DET);
-		String pidStr = ConsoleStream.getInputString("ÊäÈëÈËÔ±±àºÅ£º");
+		System.out.println(View.DET + "ä¿®æ”¹äººå‘˜" + View.DET);
+		String pidStr = ConsoleStream.getInputString("è¾“å…¥äººå‘˜ç¼–å·ï¼š");
 		Integer pid = Integer.parseInt(pidStr);
-		String name = ConsoleStream.getInputString("ĞÂĞÕÃû£º");
-		String ageStr = ConsoleStream.getInputString("ĞÂÄêÁä£º");
+		String name = ConsoleStream.getInputString("æ–°å§“åï¼š");
+		String ageStr = ConsoleStream.getInputString("æ–°å¹´é¾„ï¼š");
 		Integer age = Integer.parseInt(ageStr);
-		String salStr = ConsoleStream.getInputString("ĞÂ¹¤×Ê£º");
+		String salStr = ConsoleStream.getInputString("æ–°å·¥èµ„ï¼š");
 		Double sal = Double.parseDouble(salStr);
 		Person newPerson = new Person(pid,name,age,sal);
-		// µ÷ÓÃ¿ØÖÆÆ÷µÄĞŞ¸Ä·½·¨
+		// è°ƒç”¨æ§åˆ¶å™¨çš„ä¿®æ”¹æ–¹æ³•
 		controller.edit(newPerson);
 	}
 }

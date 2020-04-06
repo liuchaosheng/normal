@@ -1,21 +1,21 @@
 public class ShellSort{
-	// Ï£¶ûÅÅÐò
+	// å¸Œå°”æŽ’åº
 	public static void shellSort(int[] array){
-		ConsoleLog.info("½øÐÐÏ£¶ûÅÅÐò");
-		// Ï£¶ûÅÅÐòÐèÒª½èÖúÓÚ²åÈëÅÅÐò
-		// ¼ÆËãÔöÁ¿µÄ³õÊ¼Öµ
+		ConsoleLog.info("è¿›è¡Œå¸Œå°”æŽ’åº");
+		// å¸Œå°”æŽ’åºéœ€è¦å€ŸåŠ©äºŽæ’å…¥æŽ’åº
+		// è®¡ç®—å¢žé‡çš„åˆå§‹å€¼
 		int cap = array.length / 2;
 		while(cap >= 1){
-			// ½øÐÐ·Ö×é ÇóÃ¿Ò»×éµÄ³õÊ¼Ë÷Òý
-			ConsoleLog.info("ÔöÁ¿ = " + cap + "µÄ¸÷¸ö·Ö×é£º");
+			// è¿›è¡Œåˆ†ç»„ æ±‚æ¯ä¸€ç»„çš„åˆå§‹ç´¢å¼•
+			ConsoleLog.info("å¢žé‡ = " + cap + "çš„å„ä¸ªåˆ†ç»„ï¼š");
 			for(int start = 0 ; start < cap ; start++){
-				// ÅÅÐò¸Ã·Ö×é
+				// æŽ’åºè¯¥åˆ†ç»„
 				InsertSort.insertSortNew(array,cap,start);
 				SortDemo.print(array);
 			}
-			// ¸Ä±äÔöÁ¿
+			// æ”¹å˜å¢žé‡
 			cap = cap / 2;
 		}
-		ConsoleLog.info("Ï£¶ûÅÅÐò½áÊø");
+		ConsoleLog.info("å¸Œå°”æŽ’åºç»“æŸ");
 	}
 }

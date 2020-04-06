@@ -2,12 +2,12 @@ public class Demo1{
 	public static void main(String args[]){
 		//System.out.println("Hello World!") ;
 		/*
-			»ù±¾Êý¾ÝÀàÐÍ£º
+			åŸºæœ¬æ•°æ®ç±»åž‹ï¼š
 			byte/short/int/long  -> 0
 			float/double -> 0.0
 			char   '\u0000'
 			boolean  false
-			ÒýÓÃÊý¾ÝÀàÐÍ£ºÄ¬ÈÏÖµ null
+			å¼•ç”¨æ•°æ®ç±»åž‹ï¼šé»˜è®¤å€¼ null
 		*/
 		int data1 = 100 ; // 100
 		int data2 = 012;  // 10
@@ -17,13 +17,13 @@ public class Demo1{
 		System.out.println(data3) ;
 		
 		int data4 = Integer.MAX_VALUE ;
-		// ÎÒÐÂÔöÁËÒ»ÐÐ
+		// æˆ‘æ–°å¢žäº†ä¸€è¡Œ
 		System.out.println("new line") ;
 		
 		
 		//0000 0000 - 0111 1111
-		//1000 0000 ×ª³ÉÔ­Âë 1000 0000 Ô­ÂëºÍ²¹ÂëÏàµÈ¡£±íÊ¾ -128
-		//-128 + 1 = 1000 0000 + 0000 0001 = 1000 0001 ±ä³ÉÔ­Âë 0111 1111 ==> 127
+		//1000 0000 è½¬æˆåŽŸç  1000 0000 åŽŸç å’Œè¡¥ç ç›¸ç­‰ã€‚è¡¨ç¤º -128
+		//-128 + 1 = 1000 0000 + 0000 0001 = 1000 0001 å˜æˆåŽŸç  0111 1111 ==> 127
 		
 	}
 }

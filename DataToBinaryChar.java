@@ -5,9 +5,9 @@ public class DataToBinaryChar{
 		String str = new String(retCharBuf);
 		System.out.println(str);
 	}
-	// ½«Ê®½øÖÆÊı¾İ×ª»»³É¶ş½øÖÆÒÔ×Ö·ûÊı×éĞÎÊ½·µ»Ø
+	// å°†åè¿›åˆ¶æ•°æ®è½¬æ¢æˆäºŒè¿›åˆ¶ä»¥å­—ç¬¦æ•°ç»„å½¢å¼è¿”å›
 	public static char[] toBinarryChar(int data){
-		boolean isSuchNumber = false; // ÓÃÓÚ±íÊ¾ÊÇ·ñÊÇ¸ºÊı
+		boolean isSuchNumber = false; // ç”¨äºè¡¨ç¤ºæ˜¯å¦æ˜¯è´Ÿæ•°
 		if(data == 0){
 			return new char[]{'0'};
 		}
@@ -15,33 +15,33 @@ public class DataToBinaryChar{
 			data = -data;
 			isSuchNumber = true;
 		}
-		//½øĞĞºËĞÄ¼ÆËã
-		//¶¨ÒåÒ»¸ö»º´æÊı×éÓÃÓÚ´æ´¢Ã¿´Î¼ÆËãµÄÓàÊı
-		char[] charBuf = new char[32]; // ÕûĞÎ×î¶àÕ¼ÓĞ32Î»¶ş½øÖÆÎ»
-		int len = 0; // ¸Ä±äÁ¿ÓÃÓÚ±ê¼Ç´æ´¢Ë÷Òı
-		int shang = data; // ±ê¼ÇÃ¿´Î¼ÆËãµÄÉÌ
-		int yushu = 0; // ±ê¼ÇÃ¿´Î¼ÆËãµÄÓàÊı
-		// Ñ­»·¼ÆËã
+		//è¿›è¡Œæ ¸å¿ƒè®¡ç®—
+		//å®šä¹‰ä¸€ä¸ªç¼“å­˜æ•°ç»„ç”¨äºå­˜å‚¨æ¯æ¬¡è®¡ç®—çš„ä½™æ•°
+		char[] charBuf = new char[32]; // æ•´å½¢æœ€å¤šå æœ‰32ä½äºŒè¿›åˆ¶ä½
+		int len = 0; // æ”¹å˜é‡ç”¨äºæ ‡è®°å­˜å‚¨ç´¢å¼•
+		int shang = data; // æ ‡è®°æ¯æ¬¡è®¡ç®—çš„å•†
+		int yushu = 0; // æ ‡è®°æ¯æ¬¡è®¡ç®—çš„ä½™æ•°
+		// å¾ªç¯è®¡ç®—
 		while(shang > 0){
 			int temp = shang;
 			shang = shang / 2;
 			yushu = temp % 2;
-			// »º´æÓàÊı
+			// ç¼“å­˜ä½™æ•°
 			charBuf[len++] = (char)('0' + yushu);
 		}
-		//Ñ­»·½áÊøºóĞèÒªÄæĞòÅÅÁĞ
+		//å¾ªç¯ç»“æŸåéœ€è¦é€†åºæ’åˆ—
 		char[] retCharBuf = null; 
-		if(isSuchNumber){ // ¸ºÊıÔò¼Ó·ûºÅ
+		if(isSuchNumber){ // è´Ÿæ•°åˆ™åŠ ç¬¦å·
 			retCharBuf = new char[len + 1];
-			retCharBuf[0] = '-';  // ´æ´¢·ûºÅÎ»
+			retCharBuf[0] = '-';  // å­˜å‚¨ç¬¦å·ä½
 			for(int i = 0 ; i < len ; i++){
-				//½«¼ÆËã½á¹ûÖĞµÄÊı¾İÄæĞò·ÅÈëĞÂÊı×éÖĞ
+				//å°†è®¡ç®—ç»“æœä¸­çš„æ•°æ®é€†åºæ”¾å…¥æ–°æ•°ç»„ä¸­
 				retCharBuf[i + 1] = charBuf[len - i - 1];
 			}
 		}else{
 			retCharBuf = new char[len];
 			for(int i = 0 ; i < len ; i++){
-				//½«¼ÆËã½á¹ûÖĞµÄÊı¾İÄæĞò·ÅÈëĞÂÊı×éÖĞ
+				//å°†è®¡ç®—ç»“æœä¸­çš„æ•°æ®é€†åºæ”¾å…¥æ–°æ•°ç»„ä¸­
 				retCharBuf[i] = charBuf[len - i - 1];
 			}
 		}

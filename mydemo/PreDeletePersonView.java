@@ -11,7 +11,7 @@ import club.zylearn.view.View;
 import club.zylearn.vo.Person;
 import club.zylearn.controller.Controller;
 
-// ¹ØÓÚÊÓÍ¼µÄ½Ó¿Ú
+// å…³äºè§†å›¾çš„æ¥å£
 public class PreDeletePersonView implements View{
 	private Controller controller;
 	public void setController(Controller controller){
@@ -20,11 +20,11 @@ public class PreDeletePersonView implements View{
 	public PreDeletePersonView(Controller controller){
 		this.controller = controller;
 	}
-	// Ê¹ÓÃ´«ÈëµÄÊı¾İÄ£ĞÍ½øĞĞäÖÈ¾
+	// ä½¿ç”¨ä¼ å…¥çš„æ•°æ®æ¨¡å‹è¿›è¡Œæ¸²æŸ“
 	@Override
 	public void render(Map<String,Object> model){
-		System.out.println(View.DET + "É¾³ıÈËÔ±" + View.DET);
-		String pidStr = ConsoleStream.getInputString("ÊäÈëÉ¾³ıÈËÔ±±àºÅ£º");
+		System.out.println(View.DET + "åˆ é™¤äººå‘˜" + View.DET);
+		String pidStr = ConsoleStream.getInputString("è¾“å…¥åˆ é™¤äººå‘˜ç¼–å·ï¼š");
 		Integer pid = Integer.parseInt(pidStr);
 		controller.delete(pid);
 	}

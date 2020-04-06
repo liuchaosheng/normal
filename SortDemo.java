@@ -5,7 +5,7 @@ public class SortDemo{
 	private static final String TABLE = "\t";
 	private static int count = 0;
 	public static void main(String args[]){
-		// Ëæ»ú²úÉú30¸öÕûÊı
+		// éšæœºäº§ç”Ÿ30ä¸ªæ•´æ•°
 		int[] array = new int[10];
 		Random random = new Random();
 		for(int i = 0 ; i < array.length ; i++){
@@ -14,20 +14,20 @@ public class SortDemo{
 		long start = System.currentTimeMillis();
 		
 		print(array);
-		//InsertSort.insertSortNew(array,1,0); // ½øĞĞÆÕÍ¨²åÈëÅÅĞò
-		//BubbleSort.bubbleSort(array); // ½øĞĞÃ°ÅİÅÅĞò
-		SelectSort.selectSort(array); // ½øĞĞÑ¡ÔñÅÅĞò
-		//ShellSort.shellSort(array);  //½øĞĞÏ£¶ûÅÅĞò£¬½èÖúÓÚ²åÈëÅÅĞò
-		//QuickSort.quickSort(array,0,array.length - 1); // ½øĞĞ¿ìËÙÅÅĞò
-		//int[] newArr = MergeSort.mergeSort(array,0,array.length - 1); // ½øĞĞ¹é²¢ÅÅĞò
+		//InsertSort.insertSortNew(array,1,0); // è¿›è¡Œæ™®é€šæ’å…¥æ’åº
+		//BubbleSort.bubbleSort(array); // è¿›è¡Œå†’æ³¡æ’åº
+		SelectSort.selectSort(array); // è¿›è¡Œé€‰æ‹©æ’åº
+		//ShellSort.shellSort(array);  //è¿›è¡Œå¸Œå°”æ’åºï¼Œå€ŸåŠ©äºæ’å…¥æ’åº
+		//QuickSort.quickSort(array,0,array.length - 1); // è¿›è¡Œå¿«é€Ÿæ’åº
+		//int[] newArr = MergeSort.mergeSort(array,0,array.length - 1); // è¿›è¡Œå½’å¹¶æ’åº
 		//print(newArr);
 		print(array);
 		
 		long useTime = System.currentTimeMillis() - start;
-		System.out.println("ÓÃÊ±£º" + useTime + "ms");
+		System.out.println("ç”¨æ—¶ï¼š" + useTime + "ms");
 	}
 	
-	// ½øĞĞÊı×é´òÓ¡µÄ·½·¨
+	// è¿›è¡Œæ•°ç»„æ‰“å°çš„æ–¹æ³•
 	public static void print(int[] array){
 		for(int i = 0 ; i < array.length ; i++){
 			System.out.print(array[i] + TABLE);
@@ -36,33 +36,33 @@ public class SortDemo{
 	}
 	
 	
-	// ²åÈëÅÅĞò(ÒÔÇ°µÄÊµÏÖ)
+	// æ’å…¥æ’åº(ä»¥å‰çš„å®ç°)
 	public static void insertSort(int[] array){
-		// ¶¨ÒåÓĞĞò×éÎ²²¿Ë÷Òı
+		// å®šä¹‰æœ‰åºç»„å°¾éƒ¨ç´¢å¼•
 		int sortedEndIndex = 0;
-		// Ñ­»·±éÀúÎŞĞò×é
+		// å¾ªç¯éå†æ— åºç»„
 		for(int i = 1 ; i < array.length ; i++){
-			// ´æ´¢µ±Ç°Öµ ±ÜÃâÒÆ¶¯Ê±¸²¸Ç
+			// å­˜å‚¨å½“å‰å€¼ é¿å…ç§»åŠ¨æ—¶è¦†ç›–
 			int curValue = array[i];
-			// ¶¨Òå±äÁ¿´æ´¢ÓĞĞò×éÖĞµÚÒ»¸ö±È´ı²åÈëÔªËØ´óµÄÔªËØË÷Òı
+			// å®šä¹‰å˜é‡å­˜å‚¨æœ‰åºç»„ä¸­ç¬¬ä¸€ä¸ªæ¯”å¾…æ’å…¥å…ƒç´ å¤§çš„å…ƒç´ ç´¢å¼•
 			int insertPos = -1;
-			// ÕÒµ½ÉÏÊö¶¨ÒåµÄË÷Òı
+			// æ‰¾åˆ°ä¸Šè¿°å®šä¹‰çš„ç´¢å¼•
 			for(int j = 0 ; j <= sortedEndIndex ; j++){
 				if(array[j] > curValue){
 					insertPos = j;
 					break;
 				}
 			}
-			// ÅĞ¶ÏÊÇ·ñÕÒµ½
+			// åˆ¤æ–­æ˜¯å¦æ‰¾åˆ°
 			if(insertPos != -1){
-				// Èç¹ûÕÒµ½¸ÃË÷ÒıÔòÒÆ¶¯ÓĞĞò×éÔªËØ
+				// å¦‚æœæ‰¾åˆ°è¯¥ç´¢å¼•åˆ™ç§»åŠ¨æœ‰åºç»„å…ƒç´ 
 				for(int k = sortedEndIndex; k >= insertPos ; k--){
 					array[k+1] = array[k];
 				}
-				//ÒÆ¶¯½áÊøºó½«µ±Ç°ÔªËØ²åÈë
+				//ç§»åŠ¨ç»“æŸåå°†å½“å‰å…ƒç´ æ’å…¥
 				array[insertPos] = curValue;
 			}
-			sortedEndIndex++; //ÓĞĞò×éÎ²²¿Ë÷ÒıÔö¼Ó
+			sortedEndIndex++; //æœ‰åºç»„å°¾éƒ¨ç´¢å¼•å¢åŠ 
 		}
 	}
 	

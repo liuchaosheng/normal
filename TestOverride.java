@@ -1,25 +1,25 @@
 class A{
 	void fun(){
-		ConsoleLog.info("AµÄfun·½·¨Ö´ĞĞ");
+		ConsoleLog.info("Açš„funæ–¹æ³•æ‰§è¡Œ");
 	}
-	// ¸Ã·½·¨ÄÚ²¿µ÷ÓÃÁËfun·½·¨
+	// è¯¥æ–¹æ³•å†…éƒ¨è°ƒç”¨äº†funæ–¹æ³•
 	public void ff(){
 		this.fun();
 	}
 }
 class B extends A{
 	public void fun(){
-		ConsoleLog.info("BµÄfun·½·¨Ö´ĞĞ");
+		ConsoleLog.info("Bçš„funæ–¹æ³•æ‰§è¡Œ");
 	}
 }
 class C extends A{
 	public void fun(){
-		ConsoleLog.info("CµÄfun·½·¨Ö´ĞĞ");
+		ConsoleLog.info("Cçš„funæ–¹æ³•æ‰§è¡Œ");
 	}
 }
 
 
-// ±¾ÀıÖ¼ÔÚ²âÊÔ·½·¨¸²Ğ´µÄ¶àÌ¬ĞÔ
+// æœ¬ä¾‹æ—¨åœ¨æµ‹è¯•æ–¹æ³•è¦†å†™çš„å¤šæ€æ€§
 public class TestOverride{
 	public static void main(String args[]){
 		outFun(new C());
