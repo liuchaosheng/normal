@@ -65,10 +65,6 @@ public class Person{
 	}
 	@Override
 	public String toString(){
-<<<<<<< Updated upstream
-		return "¡¾ÈËÔ±±àºÅ£º" + this.pid + "£¬ÐÕÃû£º" + this.name + "£¬ÄêÁä£º" + this.age + "£¬¹¤×Ê£º" + this.sal + "¡¿"; 
-=======
 		return "【人员编号：" + this.pid + "，姓名：" + this.name + "，年龄：" + this.age + "，工资：" + this.sal + "】"; 
->>>>>>> Stashed changes
 	}
 }
