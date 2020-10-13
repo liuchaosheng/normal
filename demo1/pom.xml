@@ -8,7 +8,7 @@
   	<compile.version>3.1</compile.version>
   	<jdk.version>1.8</jdk.version>
   	<source.encoding>utf-8</source.encoding>
-  	<junit.version>4.11</junit.version>
+  	<junit.version>4.13.1</junit.version>
   	<log4j.version>1.6.1</log4j.version>
   </properties>
   
